@@ -39,4 +39,4 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-availab
 EXPOSE 80
 
 # Comando para arrancar Apache
-CMD ["apache2-foreground"]
+CMD php artisan migrate --force && apache2-foreground
