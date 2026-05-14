@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class EntidadB extends Model
 {
-    use HasFactory; // Activa el uso de factories
+    use HasFactory;
 
     protected $fillable = ['nombre', 'tipo', 'nivel', 'entidad_a_id'];
 

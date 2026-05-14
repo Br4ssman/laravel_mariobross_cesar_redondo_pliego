@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class EntidadA extends Model
 {
-    use HasFactory; // Activa el uso de factories
+    use HasFactory;
 
     protected $fillable = ['nombre', 'tipo', 'poder', 'mundo'];
 

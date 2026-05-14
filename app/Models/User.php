@@ -14,7 +14,6 @@ class EntidadTest extends TestCase
 #[Test]
     public function la_lista_de_entidades_es_accesible()
     {
-        // Rellenamos TODOS los campos que tu modelo EntidadA exige
         EntidadA::create([
             'nombre' => 'Personaje de Prueba',
             'tipo'   => 'Guerrero',
@@ -22,9 +21,6 @@ class EntidadTest extends TestCase
             'mundo'  => 'Mundo Alpha'
         ]);
 
-        // Intentamos entrar a la URL. 
-        // Si tu controlador usa Route::resource('entidadesA', ...), la ruta será '/entidadesA'
-        // Si no sabes cuál es, prueba con la que tengas en web.php
         $response = $this->get('/entidadesA'); 
 
         $response->assertStatus(200);
